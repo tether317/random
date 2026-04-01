@@ -14,7 +14,7 @@
     <input type="text" id="box2" name="box2">
     <br>
     <label for="box3">box3:</label>
-    <input type="text" id="box3" name="box3">
+    <input readonly type="text" id="box3" name="box3">
 
 
 </body>
@@ -22,8 +22,16 @@
 <script>
 
     function testFunc() {
-        document.getElementById("testa").innerHTML = "testaFunca";
+        let z = `${document.getElementById("box1").value} ${document.getElementById("box2").value}`
+        document.getElementById("box3").value = z;
     }
+
+
+    const myInput = document.querySelector('input');
+    myInput.addEventListener('input', (event) => {
+        testFunc();
+    });
+
 
 </script>
 
