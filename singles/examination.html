@@ -14,7 +14,7 @@
 
 <script>
 
-    const lodos = ["Nothing"
+    const lodos = ["[0-0] based"
                     ,"[1-1] lame"
                     ,"[1-2] 870"
                     ,"[1-3] doc"
@@ -26,7 +26,7 @@
     ];
 
     function thefunc(){
-        let rn = Math.floor(Math.random() * 10);
+        let rn = Math.floor(Math.random() * 9);
         let cc = lodos[rn]
         document.getElementById("theresultp").innerHTML = `Result: ${cc}`;
     }
